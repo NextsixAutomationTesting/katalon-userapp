@@ -17,8 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String email = CustomKeywords.'com.testwithhari.katalon.plugins.Gmail.readLatestEMailBodyContent'('fnextsix@gmail.com', 
-    'nextsix123', 'Inbox')
-
-println(email)
+//String email = CustomKeywords.'com.testwithhari.katalon.plugins.Gmail.readLatestEMailBodyContent'('fnextsix@gmail.com', 
+//  'bwevacywucxnovxg', 'Inbox')
+//println(email)
+Mobile.startExistingApplication('com.google.android.gm', FailureHandling.STOP_ON_FAILURE)
 

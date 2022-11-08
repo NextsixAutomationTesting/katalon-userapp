@@ -17,11 +17,13 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
 //Generate Random Alphanumerical
+
 //WebUI.setText(findTestObject(null), 'RandomStringUtils.randomNumeric(10))')
 //String randommail = RandomStringUtils.randomAlphabetic(10) + '@mymail.com'
 //WebUI.setText(findTestObject('Object Repository/api/Page_The Next Six Agent (SIT)/input_User Name_username'), randommail)
 //println('...value is :' + randommail)
 //fakedata = WS.sendRequest(findTestObject('api/Get user fake data', [('fakename') : GlobalVariable.fakename, ('fakephone') : GlobalVariable.fakephone]))
+
 // this is to extract api response from specific locator 
 //response = WS.sendRequest(findTestObject('api/Get otp'))
 //def slurper = new groovy.json.JsonSlurper()
@@ -35,11 +37,16 @@ import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
 //println('...Global Variable now is :' + GlobalVariable.fakename)
 //println('...Global Variable now is :' + GlobalVariable.fakephone)
 ////////////////////////////////////////////////////////////////////////////
+
 //This is to use apache common lang 
 //First use - import org.apache.commons.lang.RandomStringUtils as RandomStringUtils 
-//String randommail = RandomStringUtils.randomAlphabetic(10) + '@gmail.com'
-//String name = RandomStringUtils.randomAlphabetic(6)
-//How to apply Regex
+String randommail = RandomStringUtils.randomAlphabetic(10) + '@gmail.com'
+String name = RandomStringUtils.randomAlphabetic(6)
+
+println name
+
+
+/*How to apply Regex
 import java.util.regex.Matcher as Matcher
 import java.util.regex.Pattern as Pattern
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
@@ -70,3 +77,12 @@ else
 {
 	println('...Global Variable now is more than 9')
 }
+*/
+
+/*How to close mobile app if check forgot password steps 
+	
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory
+Mobile.startExistingApplication(‘com.dencreak.dlcalculator’)
+driver = MobileDriverFactory.getDriver()
+driver.resetApp()
+*/

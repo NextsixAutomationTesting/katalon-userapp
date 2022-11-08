@@ -24,4 +24,24 @@
       <initValue>''</initValue>
       <name>fakeemail</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>propertyname</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\user\\Downloads\\newAPK (1).apk'</initValue>
+      <name>UserappAPK</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\user\\Downloads\\TesterSearchAdvanced.apk'</initValue>
+      <name>advancesearchapk</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://sit-apps.nextsix.com'</initValue>
+      <name>SITAPI</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

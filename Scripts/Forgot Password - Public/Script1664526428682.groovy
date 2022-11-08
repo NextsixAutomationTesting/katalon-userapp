@@ -16,6 +16,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.apache.commons.lang.RandomStringUtils as RandomStringUtils
+import com.kms.katalon.core.mobile.keyword.internal.MobileDriverFactory as MobileDriverFactory
+import io.appium.java_client.AppiumDriver as AppiumDriver
 
 Mobile.startApplication('C:\\Users\\user\\Downloads\\nextsix_base(1).apk', true, FailureHandling.STOP_ON_FAILURE)
 
@@ -50,10 +53,41 @@ Mobile.verifyElementText(findTestObject('Object Repository/forgot password/andro
 
 Mobile.tap(findTestObject('Object Repository/forgot password/android.widget.TextView - Ok'), 0)
 
-email = CustomKeywords.'com.testwithhari.katalon.plugins.Gmail.readLatestEMailBodyContent'('fnextsix@gmail.com', 'nextsix123', 
-    '')
+Mobile.delay(10, FailureHandling.STOP_ON_FAILURE)
 
-println(email)
+Mobile.startExistingApplication('com.google.android.gm', FailureHandling.STOP_ON_FAILURE)
 
-Mobile.closeApplication()
+Mobile.tap(findTestObject('Object Repository/forgot password/android.widget.TextView - Reset your password'), 0)
+
+Mobile.tap(findTestObject('Object Repository/forgot password/android.widget.TextView - Visit this link to reset your password'), 
+    0)
+
+String name = RandomStringUtils.randomAlphabetic(6)
+
+password = name
+
+println(password)
+
+Mobile.setText(findTestObject('Object Repository/forgot password/android.widget.EditText'), password, 0)
+
+Mobile.setText(findTestObject('Object Repository/forgot password/android.widget.EditText (1)'), password, 0)
+
+Mobile.tap(findTestObject('Object Repository/forgot password/android.widget.Button - Submit'), 0)
+
+Mobile.verifyElementText(findTestObject('Object Repository/forgot password/android.widget.TextView - Successfully change password, please login via app'), 
+    'Successfully change password, please login via app.')
+
+Mobile.tap(findTestObject('forgot password/android.widget.ImageButton'), 0)
+
+Mobile.tap(findTestObject('Object Repository/forgot password/android.widget.ImageButton (2)'), 0)
+
+Mobile.startExistingApplication('com.nextsix.property', FailureHandling.STOP_ON_FAILURE)
+
+Mobile.setText(findTestObject('Object Repository/mobile/android.widget.EditText - Password'), password, 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Sign In (1)'), 0)
+
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.verifyElementText(findTestObject('forgot password/android.widget.TextView - fnextsix'), 'fnextsix@gmail.com')
 

@@ -21,9 +21,13 @@ Mobile.startApplication('C:\\Users\\user\\Downloads\\nextsix_base(1).apk', true)
 
 Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Lets Get Started (1)'), 0)
 
+Mobile.delay(1, FailureHandling.STOP_ON_FAILURE)
+
 Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (1)'), 0)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.view.ViewGroup (1)'), 0)
+Mobile.delay(1, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('mobile/Search here bar'), 0)
 
 Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (2)'), 0)
 
@@ -36,24 +40,4 @@ Mobile.verifyElementText(findTestObject('Object Repository/mobile/android.widget
 Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - OK (1)'), 0)
 
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/android.widget.TextView - Home'), 'Home')
-
-Mobile.closeApplication()
-
-Mobile.startExistingApplication('com.nextsix.property')
-
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (7)'), 0)
-
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (8)'), 0)
-
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/android.widget.TextView - Contu M Hei'), 'Contu M Hei')
-
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/android.widget.TextView - contumheigmail.com'), 'contumhei@gmail.com')
-
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (9)'), 0)
-
-Mobile.tap(findTestObject(''), 0)
-
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/android.widget.TextView - Sign In (4)'), 'Sign In')
-
-Mobile.closeApplication()
 
