@@ -17,12 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('mobile/Search by area (userapp API)', [('SITAPI') : GlobalVariable.SITAPI, ('page') : '']))
-def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(response.getResponseBodyContent())
-def totalprop = result.summary.records
-def firstprop = result.data[0].name
-def lastprop = result.data[totalprop-1].name
+Mobile.startApplication('C:\\Users\\user\\Downloads\\newAPK (1).apk', true)
 
+WebUI.callTestCase(findTestCase('Quick walkthrough'), [:], FailureHandling.STOP_ON_FAILURE)
 
-println totalprop +' property neaby'
+Mobile.delay(2)
+
+Mobile.tap(findTestObject('Object Repository/mobile/Agent profile/android.widget.TextView - Get Agent Nearby (1)'), 0, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('Object Repository/mobile/Agent profile/android.widget.EditText - Search agent here (2)'), 0)
+
+Mobile.setText(findTestObject('Object Repository/mobile/Agent profile/android.widget.EditText - Search agent here (3)'), 
+    'olive', 0)
+
+Mobile.tap(findTestObject('mobile/Agent profile/olive'), 0)
+
+Mobile.tap(findTestObject('mobile/Agent profile/olive'), 0)
+
+Mobile.tap(findTestObject('Object Repository/mobile/Agent profile/android.view.View (1)'), 0)
+

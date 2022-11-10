@@ -17,12 +17,3 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('mobile/Search by area (userapp API)', [('SITAPI') : GlobalVariable.SITAPI, ('page') : '']))
-def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(response.getResponseBodyContent())
-def totalprop = result.summary.records
-def firstprop = result.data[0].name
-def lastprop = result.data[totalprop-1].name
-
-
-println totalprop +' property neaby'

@@ -17,12 +17,18 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('mobile/Search by area (userapp API)', [('SITAPI') : GlobalVariable.SITAPI, ('page') : '']))
-def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(response.getResponseBodyContent())
-def totalprop = result.summary.records
-def firstprop = result.data[0].name
-def lastprop = result.data[totalprop-1].name
+//You can use getSourceCode() function to get it. Below is a sample how to get a full source code :
 
+import org.openqa.selenium.WebDriver
+import com.kms.katalon.core.webui.driver.DriverFactory
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+WebUI.openBrowser('https://www.propertyguru.com.my/property-for-sale?market=residential')
 
-println totalprop +' property neaby'
+WebDriver driver = DriverFactory.getWebDriver()
+
+'Get source code of current page'
+String page = driver.getPageSource()
+println page
+
+CustomKeywords.'myPack.WriteExcel.demoKey'(page)
+WebUI.closeBrowser()
