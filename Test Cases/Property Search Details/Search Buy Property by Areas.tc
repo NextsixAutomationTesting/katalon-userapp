@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Search Property by name</name>
+   <name>Search Buy Property by Areas</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>6cfaa5dd-cf52-4d4e-9dea-0642730fecf6</testCaseGuid>
+   <testCaseGuid>97df8def-5f33-416f-8aa0-e894bb595639</testCaseGuid>
 </TestCaseEntity>

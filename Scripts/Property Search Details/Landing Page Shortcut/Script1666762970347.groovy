@@ -112,8 +112,6 @@ Mobile.tap(findTestObject('mobile/android.widget.TextView - Sign In (1)'), 0)
 
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - My Likes (2)'), 'My Likes')
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - Add to Compare'), 'Add to Compare')
-
 Mobile.tap(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - (2)'), 0)
 
 Mobile.tap(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - Zero Deposit (1)'), 0)

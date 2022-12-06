@@ -17,7 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\user\\Downloads\\nextsix_base(1).apk', false)
+Mobile.startApplication('C:\\Users\\user\\Downloads\\nextsix_base(1).apk', true)
+
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('mobile/android.widget.TextView - Lets Get Started'), 0)
 

@@ -27,7 +27,7 @@ def name = result.documents[0].name
 
 println(name)
 
-Mobile.startApplication('C:\\Users\\user\\Downloads\\TesterSearchAdvanced.apk', true)
+Mobile.startApplication('C:\\Users\\user\\Downloads\\newAPK (1).apk', true)
 
 WebUI.callTestCase(findTestCase('Quick walkthrough'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -48,13 +48,14 @@ Mobile.setText(findTestObject('Object Repository/mobile/Property search by area/
 Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - kuchai East - Serviced Residence'), 
     0)
 
+WebUI.delay(2)
+
 Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/android.view.View'), 0)
 
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - 7 Properties in kuchai East'), 
     '7 Properties in kuchai East')
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - kuchai East'), 
-    'kuchai East')
+Mobile.verifyElementText(findTestObject('mobile/android.widget.TextView - kuchai ESSST'), 'kuchai East')
 
 Mobile.swipe(835, 2023, 39, 2023)
 
@@ -64,7 +65,7 @@ Mobile.swipe(835, 2023, 39, 2023)
 
 Mobile.swipe(835, 2023, 39, 2023)
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Kuchai East 17 (Rent)'), 
+Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - Kuchai East 17 (Rent)'), 
     'Kuchai East 17 (Rent)')
 
 Mobile.swipe(489, 1651, 489, 289)

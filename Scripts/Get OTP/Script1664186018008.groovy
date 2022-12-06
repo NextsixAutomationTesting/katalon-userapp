@@ -22,7 +22,7 @@ response = WS.sendRequest(findTestObject('api/Get otp - Copy', [('otp') : Global
 def slurper = new groovy.json.JsonSlurper()
 
 def result = slurper.parseText(response.getResponseBodyContent())
-
+print result
 def value = result.documents[0].code
 
 println('...value extracted is :' + value)

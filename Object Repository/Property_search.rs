@@ -55,10 +55,10 @@ import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-for(int i = 0; i&lt;20; i++) {
+for(int i = 0; i&lt;5; i++) {
         
 WS.verifyElementPropertyValue(response, 'documents'+[i]+'.for', &quot;Rent&quot;)
-WS.verifyElementPropertyValue(response, 'documents'+[i]+'.name', &quot;Kuchai Avenue&quot;)
+//WS.verifyElementPropertyValue(response, 'documents'+[i]+'.name', &quot;kuchai East&quot;)
 println(i);
 }
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>New Test Suite</name>
+   <name>Re-Run failed test suite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -12,10 +12,10 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>3991605c-b1ee-4b43-b97e-cd71dc3742c6</testSuiteGuid>
    <testCaseLink>
-      <guid>3b581769-f922-4d92-b4fc-1091590c703c</guid>
+      <guid>1cf83269-3eea-4fd6-84fd-763875222bdf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Property Search Details/Landing Page Shortcut</testCaseId>
+      <testCaseId>Test Cases/Sign Up/Sign Up - Gmail</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

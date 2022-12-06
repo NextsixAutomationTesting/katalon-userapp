@@ -53,7 +53,7 @@ Mobile.verifyElementText(findTestObject('Object Repository/forgot password/andro
 
 Mobile.tap(findTestObject('Object Repository/forgot password/android.widget.TextView - Ok'), 0)
 
-Mobile.delay(10, FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(15, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.startExistingApplication('com.google.android.gm', FailureHandling.STOP_ON_FAILURE)
 

@@ -17,7 +17,7 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
-Mobile.startApplication('C:\\Users\\user\\Downloads\\TesterSearchAdvanced.apk', true)
+Mobile.startApplication('C:\\Users\\user\\Downloads\\newAPK (1).apk', true)
 
 response = WS.sendRequest(findTestObject('mobile/Search by area (userapp API)', [('SITAPI') : GlobalVariable.SITAPI, ('page') : '']))
 
@@ -38,9 +38,13 @@ Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
 Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Get Agent Nearby'), 
     0)
 
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+
 Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Property'), 0)
 
-Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Rent'), 0)
+Mobile.delay(1, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('mobile/Property search by area/android.widget.TextView - Rent (1)'), 0)
 
 Mobile.setText(findTestObject('Object Repository/mobile/Property search by area/android.widget.EditText - Search property here'), 
     'Kuchai Lama', 0)
@@ -60,14 +64,13 @@ Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/andr
 
 Mobile.tap(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Apply'), 0)
 
-Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(4, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.swipe(489, 293, 489, 1670)
+Mobile.swipe(489, 293, 489, 1700)
 
 println(firstprop)
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Kuchai Avenue'), 
-    firstprop)
+Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - kuchai East 999'), firstprop)
 
 Mobile.swipe(835, 1765, 39, 1765)
 
@@ -83,12 +86,12 @@ Mobile.swipe(835, 1765, 39, 1765)
 
 println(lastprop)
 
-Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - Zyablikovo Villa (1)'), 
+Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - Kuchai East 17 (Rent)'), 
     lastprop)
 
 Mobile.swipe(489, 1651, 489, 289)
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Property search by area/android.widget.TextView - Kuchai Avenue (1)'), 
+Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - Kuchai East 17 (Rent) (2)'), 
     firstprop)
 
 Mobile.swipe(0, 1745, 0, 289)
@@ -105,9 +108,8 @@ Mobile.swipe(0, 1745, 0, 289)
 
 Mobile.swipe(0, 1745, 0, 289)
 
-Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - Zyablikovo Villa'), lastprop)
-
-Mobile.closeApplication()
+Mobile.verifyElementText(findTestObject('mobile/Property search by area/android.widget.TextView - Kuchai East 17 (Rent)'), 
+    lastprop)
 
 Mobile.closeApplication()
 
