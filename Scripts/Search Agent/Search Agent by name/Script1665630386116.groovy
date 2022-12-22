@@ -42,11 +42,8 @@ Mobile.verifyElementText(findTestObject('Object Repository/mobile/Agent profile/
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/Agent profile/android.widget.TextView - Bangsar (1)'), 
     'Bangsar')
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Agent profile/android.widget.TextView - 2 Agents Nearby'), 
-    '2 Agents Nearby')
-
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Agent profile/android.widget.TextView - Yong Kar Yeun'), 
-    'Yong Kar Yeun')
+// Mobile.verifyElementText(findTestObject('Object Repository/mobile/Agent profile/android.widget.TextView - 2 Agents Nearby'), 
+ //   '2 Agents Nearby')
 
 Mobile.tap(findTestObject('Object Repository/mobile/Agent profile/android.view.View (1)'), 0)
 

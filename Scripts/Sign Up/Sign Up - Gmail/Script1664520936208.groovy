@@ -17,6 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WS.sendRequest(findTestObject('Delete user - Copy'))
+
 Mobile.startApplication('C:\\Users\\user\\Downloads\\nextsix_base(1).apk', true, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Lets Get Started'), 0, FailureHandling.STOP_ON_FAILURE)
@@ -29,40 +31,47 @@ Mobile.tap(findTestObject('sign in with gmail/android.widget.TextView - Sign In 
 
 Mobile.tap(findTestObject('sign in with gmail/android.widget.TextView - Calvin Kurt (1)'), 0)
 
-Mobile.setText(findTestObject('Object Repository/mobile/android.widget.EditText - 60 Phone Number'), '179756473', 0, FailureHandling.STOP_ON_FAILURE)
+/*def status = */
+Mobile.setText(findTestObject('Object Repository/mobile/android.widget.EditText - 60 Phone Number'), '179756473', 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Submit (3)'), 0, FailureHandling.STOP_ON_FAILURE)
+/*if (status == null) {
+    WS.sendRequest(findTestObject('Delete user - Copy'))
+}
+else*/
+Mobile.tap(findTestObject('mobile/android.widget.TextView - Submit new'), 0, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('Get OTP'), [:], FailureHandling.STOP_ON_FAILURE)
 
 Mobile.setText(findTestObject('Object Repository/mobile/android.widget.EditText (1)'), GlobalVariable.otp, 0, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Submit (4)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.tap(findTestObject('mobile/android.widget.TextView - Submit new'), 0, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.verifyElementText(findTestObject('mobile/android.widget.TextView - Your phone number has been verified'), 'Your phone number has been verified.', 
     FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Ok (2)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Ok (2)'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Wilayah Persekutuan Putrajaya'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Wilayah Persekutuan Putrajaya'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Wilayah Persekutuan Labuan'), 0, FailureHandling.OPTIONAL)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Wilayah Persekutuan Labuan'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Selangor'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Selangor'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Next (1)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Next (1)'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Agricultural Land'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Agricultural Land'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - FactoryWarehouse'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - FactoryWarehouse'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Next (1)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Next (1)'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.view.ViewGroup (3)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.view.ViewGroup (3)'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Submit (6)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.TextView - Submit (6)'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (3)'), 0, FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/mobile/android.widget.ImageView (3)'), 0, FailureHandling.CONTINUE_ON_FAILURE)
 
 Mobile.tap(findTestObject('mobile/Profile 2'), 0, FailureHandling.STOP_ON_FAILURE)
 

@@ -43,3 +43,7 @@ Mobile.tap(findTestObject('mobile/Profile 3'), 0)
 
 Mobile.verifyElementText(findTestObject('mobile/android.widget.TextView - Sign In'), 'Sign In')
 
+Mobile.tap(findTestObject('Object Repository/android.widget.TextView - Submit'), 0)
+
+Mobile.closeApplication()
+

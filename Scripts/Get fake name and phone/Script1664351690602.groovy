@@ -64,12 +64,14 @@ if (mat.find()) {
 
     if (GlobalVariable.fakephone.length() == 9) {
         println('...Number is good')
-		println(GlobalVariable.fakephone)
-    } else {
+		println(GlobalVariable.fakephone) c 
+		if (GlobalVariable.fakephone.startsWith("11")) {String res3 = GlobalVariable.fakephone+1 
+			GlobalVariable.fakephone = res3
+			println GlobalVariable.fakephone}
+		
+    }else {	
 		String res3 = GlobalVariable.fakephone+1
 		GlobalVariable.fakephone = res3
         println GlobalVariable.fakephone
     }
-}
-
-
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

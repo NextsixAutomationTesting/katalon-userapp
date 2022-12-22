@@ -29,6 +29,9 @@ Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/andro
 
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - Zero Deposit'), 'Zero Deposit')
 
+'Here Y constant for Swipe Vertical Left to Right'
+Mobile.swipe(799, 828, 300, 828)
+
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - Home Pro'), 'Home Pro')
 
 'Get Device Height and Store in device_height variable'
@@ -77,8 +80,7 @@ Mobile.tap(findTestObject('mobile/Shortcut/android.widget.TextView - Get Agent (
 Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - Kuchai Lama (1)'), 
     'Kuchai Lama')
 
-Mobile.verifyElementText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - 15 Agents Nearby (1)'), 
-    '15 Agents Nearby')
+Mobile.getText(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - 15 Agents Nearby (1)'), 0)
 
 Mobile.tap(findTestObject('Object Repository/mobile/Shortcut/android.widget.TextView - (1)'), 0)
 
